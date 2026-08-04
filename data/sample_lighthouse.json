@@ -1,0 +1,163 @@
+{
+  "lighthouseVersion": "11.4.0",
+  "requestedUrl": "https://example.com/",
+  "finalUrl": "https://example.com/",
+  "finalDisplayedUrl": "https://example.com/",
+  "fetchTime": "2026-08-04T09:15:22.481Z",
+  "userAgent": "Mozilla/5.0 (Simulated Moto G Power) Chrome/126.0.0.0 Mobile",
+  "categories": {
+    "performance": {
+      "id": "performance",
+      "title": "Performance",
+      "score": 0.62
+    }
+  },
+  "audits": {
+    "first-contentful-paint": {
+      "id": "first-contentful-paint",
+      "title": "First Contentful Paint",
+      "description": "First Contentful Paint marks the time at which the first text or image is painted.",
+      "score": 0.9,
+      "scoreDisplayMode": "numeric",
+      "numericValue": 1620.0,
+      "numericUnit": "millisecond",
+      "displayValue": "1.6 s"
+    },
+    "largest-contentful-paint": {
+      "id": "largest-contentful-paint",
+      "title": "Largest Contentful Paint",
+      "description": "Largest Contentful Paint marks the time at which the largest text or image is painted.",
+      "score": 0.31,
+      "scoreDisplayMode": "numeric",
+      "numericValue": 4520.0,
+      "numericUnit": "millisecond",
+      "displayValue": "4.5 s"
+    },
+    "cumulative-layout-shift": {
+      "id": "cumulative-layout-shift",
+      "title": "Cumulative Layout Shift",
+      "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport.",
+      "score": 0.98,
+      "scoreDisplayMode": "numeric",
+      "numericValue": 0.052,
+      "numericUnit": "unitless",
+      "displayValue": "0.052"
+    },
+    "interaction-to-next-paint": {
+      "id": "interaction-to-next-paint",
+      "title": "Interaction to Next Paint",
+      "description": "Interaction to Next Paint measures page responsiveness, how long it takes the page to visibly respond to user input.",
+      "score": 0.55,
+      "scoreDisplayMode": "numeric",
+      "numericValue": 348.0,
+      "numericUnit": "millisecond",
+      "displayValue": "348 ms"
+    },
+    "total-blocking-time": {
+      "id": "total-blocking-time",
+      "title": "Total Blocking Time",
+      "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms.",
+      "score": 0.28,
+      "scoreDisplayMode": "numeric",
+      "numericValue": 782.0,
+      "numericUnit": "millisecond",
+      "displayValue": "780 ms"
+    },
+    "speed-index": {
+      "id": "speed-index",
+      "title": "Speed Index",
+      "description": "Speed Index shows how quickly the contents of a page are visibly populated.",
+      "score": 0.71,
+      "scoreDisplayMode": "numeric",
+      "numericValue": 4180.0,
+      "numericUnit": "millisecond",
+      "displayValue": "4.2 s"
+    },
+    "render-blocking-resources": {
+      "id": "render-blocking-resources",
+      "title": "Eliminate render-blocking resources",
+      "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles.",
+      "score": 0.24,
+      "scoreDisplayMode": "metricSavings",
+      "details": {
+        "type": "opportunity",
+        "overallSavingsMs": 1850.0,
+        "overallSavingsBytes": 96000
+      }
+    },
+    "unused-javascript": {
+      "id": "unused-javascript",
+      "title": "Reduce unused JavaScript",
+      "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity.",
+      "score": 0.33,
+      "scoreDisplayMode": "metricSavings",
+      "details": {
+        "type": "opportunity",
+        "overallSavingsMs": 1120.0,
+        "overallSavingsBytes": 245000
+      }
+    },
+    "uses-responsive-images": {
+      "id": "uses-responsive-images",
+      "title": "Properly size images",
+      "description": "Serve images that are appropriately-sized to save cellular data and improve load time.",
+      "score": 0.4,
+      "scoreDisplayMode": "metricSavings",
+      "details": {
+        "type": "opportunity",
+        "overallSavingsMs": 760.0,
+        "overallSavingsBytes": 512000
+      }
+    },
+    "unminified-javascript": {
+      "id": "unminified-javascript",
+      "title": "Minify JavaScript",
+      "description": "Minifying JavaScript files can reduce payload sizes and script parse time.",
+      "score": 0.5,
+      "scoreDisplayMode": "metricSavings",
+      "details": {
+        "type": "opportunity",
+        "overallSavingsMs": 430.0,
+        "overallSavingsBytes": 84000
+      }
+    },
+    "uses-text-compression": {
+      "id": "uses-text-compression",
+      "title": "Enable text compression",
+      "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes.",
+      "score": 0.0,
+      "scoreDisplayMode": "metricSavings",
+      "details": {
+        "type": "opportunity",
+        "overallSavingsMs": 300.0,
+        "overallSavingsBytes": 138000
+      }
+    },
+    "modern-image-formats": {
+      "id": "modern-image-formats",
+      "title": "Serve images in next-gen formats",
+      "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG.",
+      "score": 0.6,
+      "scoreDisplayMode": "metricSavings",
+      "details": {
+        "type": "opportunity",
+        "overallSavingsMs": 210.0,
+        "overallSavingsBytes": 190000
+      }
+    },
+    "color-contrast": {
+      "id": "color-contrast",
+      "title": "Background and foreground colors have a sufficient contrast ratio",
+      "description": "Low-contrast text is difficult or impossible for many users to read.",
+      "score": 1.0,
+      "scoreDisplayMode": "binary"
+    },
+    "viewport": {
+      "id": "viewport",
+      "title": "Has a `<meta name=\"viewport\">` tag with `width` or `initial-scale`",
+      "description": "A viewport meta tag optimizes your app for mobile screen sizes.",
+      "score": 1.0,
+      "scoreDisplayMode": "binary"
+    }
+  }
+}

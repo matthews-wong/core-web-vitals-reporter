@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "core-web-vitals-reporter"
+version = "0.1.0"
+description = "Offline CLI that turns a Lighthouse JSON report into a focused Core Web Vitals report."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Matthews Wong" }]
+keywords = ["lighthouse", "core-web-vitals", "performance", "cli", "web-performance"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+core-web-vitals-reporter = "cwvreporter.cli:main"
+
+[tool.setuptools]
+packages = ["cwvreporter"]
+
+[tool.setuptools.package-data]
+cwvreporter = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
