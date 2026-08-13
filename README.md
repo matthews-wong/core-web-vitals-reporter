@@ -37,10 +37,14 @@ Python 3.11 · Click · Rich
 
 ```bash
 pip install -e .
-# report on the bundled sample Lighthouse run
-core-web-vitals-reporter --input data/sample_lighthouse.json
-# Markdown output for a PR / docs
-core-web-vitals-reporter --input data/sample_lighthouse.json --format markdown
+# report on the bundled sample Lighthouse run (positional JSON path)
+core-web-vitals-reporter data/sample_lighthouse.json
+# Markdown to stdout (drop straight into a PR comment)
+core-web-vitals-reporter data/sample_lighthouse.json --stdout-md
+# Write the Markdown report to a file instead
+core-web-vitals-reporter data/sample_lighthouse.json --markdown report.md
+# Fail the run (exit 1) if any Core Web Vital is poor — useful in CI
+core-web-vitals-reporter data/sample_lighthouse.json --fail-on-poor
 ```
 
 ## Usage
@@ -70,7 +74,7 @@ tests/            # pytest: extraction + boundary classification
 ## Testing
 
 ```bash
-pip install -e . pytest
+pip install -e ".[dev]"
 pytest
 ```
 

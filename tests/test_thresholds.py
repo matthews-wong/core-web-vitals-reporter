@@ -39,6 +39,21 @@ def test_core_metrics_membership():
         ("inp", 200.01, Rating.NEEDS_IMPROVEMENT),
         ("inp", 500, Rating.NEEDS_IMPROVEMENT),
         ("inp", 500.01, Rating.POOR),
+        # FCP boundaries (ms): good <= 1800, NI <= 3000, else poor.
+        ("fcp", 1800, Rating.GOOD),
+        ("fcp", 1800.01, Rating.NEEDS_IMPROVEMENT),
+        ("fcp", 3000, Rating.NEEDS_IMPROVEMENT),
+        ("fcp", 3000.01, Rating.POOR),
+        # TBT boundaries (ms): good <= 200, NI <= 600, else poor.
+        ("tbt", 200, Rating.GOOD),
+        ("tbt", 200.01, Rating.NEEDS_IMPROVEMENT),
+        ("tbt", 600, Rating.NEEDS_IMPROVEMENT),
+        ("tbt", 600.01, Rating.POOR),
+        # Speed Index boundaries (ms): good <= 3400, NI <= 5800, else poor.
+        ("si", 3400, Rating.GOOD),
+        ("si", 3400.01, Rating.NEEDS_IMPROVEMENT),
+        ("si", 5800, Rating.NEEDS_IMPROVEMENT),
+        ("si", 5800.01, Rating.POOR),
     ],
 )
 def test_boundary_classification(metric_id, value, expected):
